@@ -355,7 +355,7 @@ export default function Home() {
               <div className="space-y-8">
                 <div>
                   <div className="text-xs text-primary uppercase tracking-wider font-bold mb-2">Canal Directo</div>
-                  <div className="text-xl text-foreground font-medium">+56 9 3937 3206</div>
+                  <div className="text-xl text-foreground font-medium">+56 9 8924 6972</div>
                   <div className="text-foreground font-medium mt-1">contacto@metalmecanica.cl</div>
                 </div>
                 <div>
