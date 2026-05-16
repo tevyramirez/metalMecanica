@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <Button 
             className="hidden md:inline-flex" 
-            onClick={() => window.open('https://wa.me/56939373206', '_blank')}
+            onClick={() => window.open('https://wa.me/56989246972', '_blank')}
           >
             WhatsApp
           </Button>
@@ -442,7 +442,7 @@ export default function Home() {
 
       {/* 11. Floating WhatsApp Button */}
       <a 
-        href="https://wa.me/56939373206" 
+        href="https://wa.me/56989246972" 
         target="_blank" 
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp"
