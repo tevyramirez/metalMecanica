@@ -1,40 +1,52 @@
-<<<<<<< HEAD
-# metalMecanica
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏢 MetalMecánica - Landing Page Corporativa
 
-## Getting Started
+Landing page profesional de alta conversión para empresa de metalurgia y servicios industriales.
 
-First, run the development server:
+## 🚀 Tecnologías
+
+- **Framework:** Next.js 16
+- **Estilos:** Tailwind CSS 4
+- **Animaciones:** Framer Motion
+- **Iconos:** Lucide React
+- **Lenguaje:** TypeScript
+
+## ✨ Características
+
+- 🎨 Diseño moderno y profesional
+- 📱 Totalmente responsive
+- ⚡ Optimizado para SEO y performance
+- 🎭 Animaciones fluidas con Framer Motion
+- 🖼️ Galería de proyectos y servicios
+- 📞 Formulario de contacto integrado
+
+## 🛠️ Desarrollo Local
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Construir para producción
+npm run build
+
+# Preview del build
+npm run preview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Este proyecto está optimizado para deploy en Vercel:
 
-## Learn More
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tevyramirez/metalMecanica)
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 Licencia
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este proyecto es privado y propiedad de Mondaca.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 0bb29c8 (feat: initial premium landing page for MetalMecanica)
+Desarrollado con ❤️ por Sebastián "Tevy" Ramírez
