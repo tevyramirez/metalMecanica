@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Zap, Shield, Wrench, Layers, CheckCircle, Star } from "lucide-react";
+import { Zap, Shield, Wrench, Layers, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -104,7 +104,7 @@ export default function Home() {
               MetalMecanica — <span className="text-primary">Talca</span>
             </motion.h1>
             <motion.p variants={fadeIn} className="text-lg md:text-xl text-muted mb-10 max-w-2xl leading-relaxed">
-              Servicios de soldadura estructural, mantenimiento de maquinaria pesada en terreno y fabricación metalúrgica integral para sectores residenciales e industriales.
+              Soldadura estructural, reparación de llantas de aluminio y fierro, y fabricación de estructuras metálicas en Talca. Soluciones industriales y residenciales con la calidad que necesitas.
             </motion.p>
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="text-base h-14" onClick={() => document.getElementById('proyectos')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -123,10 +123,10 @@ export default function Home() {
         <div className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-surface/0 md:divide-surface">
             {[
-              { number: "Maestranza", label: "Taller Propio" },
-              { number: "Terreno", label: "Autonomía Total" },
-              { number: "Talca", label: "Región del Maule" },
-              { number: "Técnico", label: "Soporte en Faena" }
+              { number: "Soldadura", label: "MIG / TIG / Estructural" },
+              { number: "Llantas", label: "Reparación de Aluminio y Fierro" },
+              { number: "Estructuras", label: "Industriales y Residenciales" },
+              { number: "Terreno", label: "Cobertura Región del Maule" }
             ].map((stat, i) => (
               <div key={i} className="text-center px-4">
                 <div className="text-2xl md:text-3xl font-heading font-bold text-primary mb-2 uppercase">{stat.number}</div>
@@ -153,12 +153,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {[
-              { icon: Layers, title: "Soldadura y Montaje Estructural", desc: "Fabricación y unión de vigas de gran calado para galpones y naves industriales. Montaje en altura con plataformas elevadoras." },
-              { icon: Wrench, title: "Maquinaria Pesada en Terreno", desc: "Reparación de componentes de excavadoras, chasis y maquinaria agrícola/forestal directamente en faena con equipos autónomos." },
-              { icon: Zap, title: "Acero Inoxidable e Industria", desc: "Soldadura TIG de precisión en tuberías, componentes inoxidables, mantenimiento de cintas transportadoras y estanques." },
-              { icon: Shield, title: "Cerrajería y Estructuras Residenciales", desc: "Fabricación de portones ornamentales, rejas perimetrales, protecciones de seguridad y estructuras ligeras como cobertizos." },
-              { icon: Wrench, title: "Vehículos Comerciales", desc: "Construcción integral de carros de arrastre tipo Food Truck, incluyendo chasis, revestimientos y terminaciones en acero inoxidable." },
-              { icon: Layers, title: "Mecanizado y Recuperación", desc: "Uso de torno mecánico para fabricación y recuperación de piezas como ejes y bujes. Soldadura técnica en sistemas de escape." }
+              { icon: Layers, title: "Soldadura Estructural", desc: "Fabricación y unión de vigas de acero para galpones, naves industriales y estructuras de gran calado. Montaje en altura con plataformas elevadoras." },
+              { icon: Wrench, title: "Reparación de Llantas", desc: "Soldadura especializada en llantas de aluminio y fierro. Reparación de fisuras, grietas y daños estructurales en rines de vehículos livianos y pesados." },
+              { icon: Zap, title: "Sistemas de Escape", desc: "Reparación y fabricación de sistemas de escape para vehículos comerciales e industriales. Soldadura TIG de precisión en tuberías de acero inoxidable." },
+              { icon: Shield, title: "Estructuras Residenciales", desc: "Fabricación de portones ornamentales, rejas perimetrales, barandas, protecciones de seguridad y estructuras ligeras como cobertizos y techos." },
+              { icon: Wrench, title: "Estructuras Industriales", desc: "Galpones, techos industriales, plataformas de trabajo y estructuras metálicas para maestranzas y naves industriales." },
+              { icon: Layers, title: "Maquinaria Pesada en Terreno", desc: "Reparación de componentes de excavadoras, chasis y maquinaria agrícola/forestal directamente en faena con equipos autónomos." }
             ].map((service, i) => (
               <motion.div 
                 key={i}
@@ -195,7 +195,7 @@ export default function Home() {
               <div className="h-1 w-20 bg-primary mt-6"></div>
             </motion.div>
             <div className="mt-8 md:mt-0 flex gap-4 overflow-x-auto pb-2 scrollbar-hide text-sm font-medium">
-              {['Todos', 'Estructural', 'Industrial', 'Residencial'].map((tab, i) => (
+              {['Todos', 'Soldadura', 'Llantas', 'Estructuras', 'Terreno'].map((tab, i) => (
                 <button key={i} className={cn(
                   "px-4 py-2 rounded-full whitespace-nowrap transition-colors",
                   i === 0 ? "bg-primary text-primary-foreground" : "bg-surface text-muted hover:text-foreground"
@@ -208,12 +208,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { id: 1, src: "/proyectos/galpon-1.webp", title: "Estructura de Galpón Industrial", category: "Estructural" },
-              { id: 2, src: "/proyectos/maquinaria-1.webp", title: "Reparación de Maquinaria Pesada", category: "Industrial" },
-              { id: 3, src: "/proyectos/taller-1.webp", title: "Trabajo en Maestranza Propia", category: "Industrial" },
-              { id: 4, src: "/proyectos/terreno-1.webp", title: "Montaje Estructural en Terreno", category: "Estructural" },
-              { id: 5, src: "/proyectos/batea-1.webp", title: "Fabricación de Batea Industrial", category: "Industrial" },
-              { id: 6, src: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80", title: "Fabricación de Rejas Artísticas", category: "Residencial" }
+              { id: 1, src: "/proyectos/cliente/soldadura-1.jpg", title: "Soldadura Estructural en Obra", category: "Soldadura" },
+              { id: 2, src: "/proyectos/cliente/llanta-1.jpg", title: "Reparación de Llanta de Aluminio", category: "Llantas" },
+              { id: 3, src: "/proyectos/cliente/estructura-1.jpg", title: "Estructura Residencial", category: "Estructuras" },
+              { id: 4, src: "/proyectos/cliente/terreno-1.jpg", title: "Trabajo en Terreno", category: "Terreno" },
+              { id: 5, src: "/proyectos/cliente/soldadura-2.jpg", title: "Soldadura de Precisión", category: "Soldadura" },
+              { id: 6, src: "/proyectos/cliente/llanta-2.jpg", title: "Reparación de Rines", category: "Llantas" }
             ].map((project, i) => (
               <motion.div 
                 key={project.id}
@@ -318,18 +318,18 @@ export default function Home() {
               <div className="h-1 w-20 bg-primary mb-8"></div>
               
               <p className="text-muted mb-6 leading-relaxed">
-                Ejecutamos proyectos de fabricación y unión de vigas de acero de gran calado destinadas a naves industriales y galpones, operando tanto en taller propio como en instalaciones industriales y zonas de faena al aire libre.
+                En MetalMecanica combinamos la precisión técnica con un servicio cercano. Ya sea que necesites reparar una llanta de aluminio, construir una estructura para tu hogar o un proyecto industrial completo, estamos aquí para ayudarte con la excelencia que mereces.
               </p>
               <p className="text-muted mb-10 leading-relaxed">
-                Contamos con autonomía técnica para realizar refuerzo y blindaje de maquinaria pesada en entornos forestales, agrícolas o cercanías a ríos, utilizando equipos de generación autónoma y soldadura TIG de precisión.
+                Ejecutamos proyectos de soldadura estructural, reparación de llantas y estructuras metálicas en Talca y la Región del Maule. Contamos con autonomía técnica para trabajar tanto en taller como directamente en terreno.
               </p>
 
               <div className="space-y-4">
                 {[
-                  "Equipos de soldadura Soltec y DeWalt de alta fidelidad.",
-                  "Uso de soplete de oxicorte y mecanizado con torno mecánico.",
-                  "Operación certificada de plataformas elevadoras (Manlift).",
-                  "Equipo de protección personal bajo normas de seguridad industrial."
+                  "Soldadura MIG, TIG y estructural certificada.",
+                  "Reparación de llantas de aluminio y fierro.",
+                  "Estructuras residenciales e industriales a medida.",
+                  "Trabajo en terreno con equipos autónomos."
                 ].map((bullet, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-primary shrink-0" />
@@ -349,7 +349,7 @@ export default function Home() {
             <div className="p-12 lg:p-24 flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6 uppercase tracking-tight">Cotizaciones Técnicas</h2>
               <p className="text-muted mb-12 max-w-md leading-relaxed">
-                Para solicitar la evaluación técnica de proyectos o cotizar servicios de maestranza, soldadura y reparaciones en terreno en Talca y la Región del Maule.
+                Para solicitar la evaluación técnica de proyectos o cotizar servicios de soldadura, reparación de llantas y estructuras metálicas en Talca y la Región del Maule.
               </p>
               
               <div className="space-y-8">
@@ -383,12 +383,12 @@ export default function Home() {
                   <label className="text-sm font-medium text-muted">Tipo de proyecto</label>
                   <Select>
                     <option value="" disabled selected hidden>Selecciona una opción</option>
-                    <option value="estructural">Soldadura Estructural</option>
-                    <option value="maquinaria">Reparación Maquinaria Pesada</option>
-                    <option value="inox">Acero Inoxidable / Industrial</option>
-                    <option value="cerrajeria">Cerrajería / Residencial</option>
-                    <option value="foodtruck">Food Truck / Vehículos</option>
-                    <option value="mecanizado">Mecanizado / Torno</option>
+                    <option value="soldadura">Soldadura Estructural</option>
+                    <option value="llantas">Reparación de Llantas</option>
+                    <option value="escape">Sistemas de Escape</option>
+                    <option value="estructuras-residencial">Estructuras Residenciales</option>
+                    <option value="estructuras-industrial">Estructuras Industriales</option>
+                    <option value="maquinaria">Maquinaria Pesada en Terreno</option>
                   </Select>
                 </div>
 
